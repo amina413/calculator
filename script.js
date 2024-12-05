@@ -110,6 +110,12 @@ const adjustFontSize = () => {
     if (newFontSize < minFontSize) newFontSize = minFontSize;
 
     valueEl.style.fontSize = `${newFontSize}px`;
+
+    if (currentLength > 10) {
+        valueEl.style.overflow = 'hidden';
+    } else {
+        valueEl.style.overflow = 'visible';
+    }
 };
 
 
